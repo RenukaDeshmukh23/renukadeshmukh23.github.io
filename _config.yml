@@ -1,0 +1,30 @@
+title: Renuka Deshmukh
+description: B2B lead research, web scraping and Python automation for business teams.
+url: https://renukadeshmukh23.github.io
+baseurl: ""
+linkedin: https://www.linkedin.com/in/deshmukhrenuka/
+github: https://github.com/RenukaDeshmukh23
+# Paste only the Formspree form endpoint here. Keep your email in Formspree.
+# Example format: https://formspree.io/f/FORM_ID
+contact_form_endpoint: ""
+markdown: kramdown
+permalink: pretty
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+exclude:
+  - README.md
+  - ADD_A_PROJECT.md
+  - CONTACT_SETUP.md
+  - project-template.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

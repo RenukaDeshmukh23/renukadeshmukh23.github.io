@@ -1,0 +1,19 @@
+<article class="project-card" data-category="{{ project.category | escape }}">
+  <a class="card-media" href="{{ project.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {% if project.image %}
+    <img src="{{ project.image | relative_url }}" alt="" width="720" height="420" loading="lazy">
+    {% else %}
+    {% assign visual_name = project.visual | default: 'workflow' %}
+    <img src="{{ '/assets/illustrations/' | append: visual_name | append: '.svg' | relative_url }}" alt="" width="720" height="420" loading="lazy">
+    {% endif %}
+    <span class="media-caption">{% if project.image %}Project visual{% else %}Workflow illustration{% endif %}</span>
+    <span class="media-arrow" aria-hidden="true">↗</span>
+  </a>
+  <div class="card-body">
+    <div class="card-meta"><span>{{ project.category }}</span><span>{{ project.type }}</span></div>
+    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    <p>{{ project.summary }}</p>
+    <ul class="tags" aria-label="Skills">{% for tag in project.tags limit:4 %}<li>{{ tag }}</li>{% endfor %}</ul>
+    <a class="text-link" href="{{ project.url | relative_url }}">Explore project <span aria-hidden="true">↗</span></a>
+  </div>
+</article>

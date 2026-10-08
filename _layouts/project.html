@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section class="case-hero wrap">
+  <a class="back-link" href="{{ '/#work' | relative_url }}">← All projects</a>
+  <div class="case-heading"><p class="eyebrow">{{ page.category }} <span>/</span> {{ page.type }}</p><h1>{{ page.title }}</h1><p class="case-summary">{{ page.summary }}</p></div>
+  <ul class="tags case-tags" aria-label="Project skills">{% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}</ul>
+  <div class="case-facts"><div><span>Project type</span><strong>{{ page.type }}</strong></div><div><span>Stage</span><strong>{{ page.status }}</strong></div>{% if page.duration %}<div><span>Engagement</span><strong>{{ page.duration }}</strong></div>{% endif %}</div>
+</section>
+<div class="case-layout wrap">
+  <aside class="case-sidebar"><p class="eyebrow">In this project</p><nav id="case-toc" aria-label="Case study sections"></nav><a class="side-contact" href="{{ '/#contact' | relative_url }}">Discuss a similar project ↗</a></aside>
+  <article class="case-content">
+    {% if page.image %}<figure class="case-visual"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | escape }}"><figcaption>{{ page.image_alt }}</figcaption></figure>{% endif %}
+    {{ content }}
+    {% if page.project_url %}<p><a class="button button-outline" href="{{ page.project_url }}" target="_blank" rel="noopener noreferrer">View project on GitHub ↗</a></p>{% endif %}
+    <div class="case-bottom"><span>Have a similar research or automation task?</span><a href="{{ '/#contact' | relative_url }}">Let’s discuss your project ↗</a></div>
+  </article>
+</div>
+<section class="contact-section wrap case-contact"><div><p class="eyebrow">Your next project</p><h2>Let’s make your<br>data work for you.</h2></div><a class="button button-dark" href="{{ '/#contact' | relative_url }}">Discuss your project <span aria-hidden="true">↗</span></a></section>
