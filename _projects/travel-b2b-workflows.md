@@ -45,6 +45,13 @@ Instagram reporting uses CSV or manually entered metrics. The code also includes
 The dashboard images are digitally anonymised for confidentiality and use demonstration data from the supplied verification files. The displayed brand is a neutral portfolio label. Lead counts, bookings, revenue and other figures illustrate the interface; they are not client performance results.
 
 <figure class="case-visual">
+  <img src="/assets/travel-dashboard/overview.png"
+       alt="Dashboard overview showing content performance and workflow summary"
+       loading="lazy">
+  <figcaption>Dashboard Overview: content performance and workflow summary, shown with demonstration data.</figcaption>
+</figure>
+
+<figure class="case-visual">
   <img src="/assets/travel-dashboard/schedule.png" alt="Content scheduling interface with caption, media, date and timezone fields, shown with demonstration data." loading="lazy">
   <figcaption>Schedule view: content preparation and publishing controls, shown with demonstration data.</figcaption>
 </figure>
