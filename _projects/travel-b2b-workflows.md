@@ -50,7 +50,7 @@ The dashboard images are digitally anonymised for confidentiality and use demons
 </figure>
 
 <figure class="case-visual">
-  <img src="/assets/projects/travel-dashboard/lead-pipeline.png" alt="Lead pipeline interface with stages, follow-up tracking and a fictional QA traveller record." loading="lazy">
+  <img src="/assets/travel-dashboard/lead-pipeline.png" alt="Lead pipeline interface with stages, follow-up tracking and a fictional QA traveller record." loading="lazy">
   <figcaption>Lead Pipeline view: stages, follow-up tracking and booking fields, shown with a fictional test record.</figcaption>
 </figure>
 
