@@ -6,7 +6,7 @@ tags: [Python, Playwright, JavaScript, Dashboard Design, Data Quality, B2B Resea
 order: 2
 type: "Client project"
 status: "Materials delivered; dashboard prototype"
-image: "/assets/projects/travel-dashboard/overview.png"
+image: "/assets/travel-dashboard/overview.png"
 image_alt: "Content dashboard overview using demonstration data. The displayed metrics are examples."
 visual: "travel"
 ---
