@@ -1,1 +1,93 @@
-<article class="project-card" data-category="{{ project.category | escape }}"><a class="visual" href="{{ project.url | relative_url }}" aria-label="View {{ project.title | escape }}"><div class="visual-top"><span>{{ project.category | upcase }}</span><span>↗</span></div><div class="visual-flow"><span>Source data</span><b>→</b><span>{% if project.category == 'B2B Research' %}Enrich &amp; review{% elsif project.category == 'Creative Support' %}Research &amp; create{% else %}Extract &amp; validate{% endif %}</span><b>→</b><span>Deliver</span></div><div class="visual-bottom">{{ project.type }} <span>PROJECT / {{ project.order }}</span></div></a><div class="card-info"><div class="card-meta">{{ project.type }} <span>•</span> {{ project.category }}</div><h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3><p>{{ project.summary }}</p><div class="taglist">{% for tag in project.tags limit:3 %}<span>{{ tag }}</span>{% endfor %}</div><a class="card-link" href="{{ project.url | relative_url }}">Read case study <span>↗</span></a></div></article>
+{% raw %}
+{% assign card_title = project.title %}
+{% assign card_summary = project.summary %}
+{% assign card_industry = project.type %}
+{% assign card_category = project.category %}
+{% assign card_tags = project.tags %}
+{% assign project_link = project.url | downcase %}
+
+{% if project_link contains 'jewellery' %}
+  {% assign card_industry = 'JEWELLERY' %}
+  {% assign card_category = 'Lead Generation' %}
+  {% assign card_title = 'Jewellery Lead Research & Enrichment' %}
+  {% assign card_summary = 'B2B prospect identification, website and contact research, data enrichment, deduplication, and structured lead-list preparation.' %}
+  {% assign card_tags = 'Lead Generation|Selenium|Data Enrichment|Excel' | split: '|' %}
+
+{% elsif project_link contains 'travel' %}
+  {% assign card_industry = 'TRAVEL & TOURISM' %}
+  {% assign card_category = 'Workflow Design' %}
+  {% assign card_title = 'Travel Content & Lead Operations Dashboard' %}
+  {% assign card_summary = 'Dashboard prototype combining content scheduling, lead pipeline tracking, and structured workflows for operational visibility.' %}
+  {% assign card_tags = 'Dashboard Design|Lead Tracking|Data Quality|Workflow Design' | split: '|' %}
+
+{% elsif project_link contains 'home-inspector' %}
+  {% assign card_industry = 'PROPERTY SERVICES' %}
+  {% assign card_category = 'Web Scraping' %}
+  {% assign card_title = 'Home Inspector Data Extraction' %}
+  {% assign card_summary = 'Web data extraction and structured research of home inspector information using source navigation, XPath, data cleaning, and validation.' %}
+  {% assign card_tags = 'Web Scraping|XPath|Data Cleaning|Validation' | split: '|' %}
+
+{% elsif project_link contains 'restaurant' %}
+  {% assign card_industry = 'FOOD & HOSPITALITY' %}
+  {% assign card_category = 'Automation' %}
+  {% assign card_title = 'Restaurant Status Monitoring & Automation' %}
+  {% assign card_summary = 'Browser-based monitoring of restaurant status information, with repeatable checks and organized tracking of changes.' %}
+  {% assign card_tags = 'Browser Automation|Web Monitoring|Data Tracking' | split: '|' %}
+
+{% elsif project_link contains 'amazon' %}
+  {% assign card_industry = 'E-COMMERCE' %}
+  {% assign card_category = 'Product Research' %}
+  {% assign card_title = 'Amazon Product Data Research' %}
+  {% assign card_summary = 'Product information collection, attribute comparison, research organization, and spreadsheet-based data preparation.' %}
+  {% assign card_tags = 'Product Research|Data Extraction|Excel|Data Organization' | split: '|' %}
+
+{% elsif project_link contains 'property' %}
+  {% assign card_industry = 'REAL ESTATE & RENTALS' %}
+  {% assign card_category = 'Property Research' %}
+  {% assign card_title = 'Property Research Across Airbnb, OLX & Zillow' %}
+  {% assign card_summary = 'Property listing research across Airbnb, OLX, Zillow, and related platforms, including information comparison and structured research records.' %}
+  {% assign card_tags = 'Property Research|Cross-Platform Research|Data Organization|Excel' | split: '|' %}
+{% endif %}
+
+<article class="project-card" data-category="{{ card_category | escape }}">
+  <a class="visual" href="{{ project.url | relative_url }}" aria-label="View {{ card_title | escape }}">
+    <div class="visual-top">
+      <span>{{ card_industry | upcase }}</span>
+      <span>↗</span>
+    </div>
+
+    <div class="visual-flow">
+      <span>Source data</span>
+      <b>→</b>
+      <span>Research &amp; process</span>
+      <b>→</b>
+      <span>Structured output</span>
+    </div>
+
+    <div class="visual-bottom">
+      {{ card_category }}
+      <span>PROJECT / {{ project.order }}</span>
+    </div>
+  </a>
+
+  <div class="card-info">
+    <div class="card-meta">{{ card_industry }} <span>•</span> {{ card_category }}</div>
+
+    <h3>
+      <a href="{{ project.url | relative_url }}">{{ card_title }}</a>
+    </h3>
+
+    <p>{{ card_summary }}</p>
+
+    <div class="taglist">
+      {% for tag in card_tags limit:4 %}
+        <span>{{ tag }}</span>
+      {% endfor %}
+    </div>
+
+    <a class="card-link" href="{{ project.url | relative_url }}">
+      View case study <span>↗</span>
+    </a>
+  </div>
+</article>
+{% endraw %}
