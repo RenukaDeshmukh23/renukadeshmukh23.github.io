@@ -1,0 +1,44 @@
+
+/* Midnight + Mint — deliberately isolated as a theme override.
+   Layout and skill filters remain managed by existing Jekyll files. */
+:root { --ink:#F2F7FC; --muted:#B8C8D9; --blue:#6FD9C1; --line:#304257; --bg:#0E1829; }
+html{scroll-behavior:smooth} body{background:#0E1829!important;color:#F2F7FC!important}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid #6FD9C1;outline-offset:4px}
+.header{background:#0E1829!important;border-bottom:1px solid #2B3C52!important;position:sticky;top:0;z-index:30;backdrop-filter:blur(14px)}
+.logo{color:#F2F7FC!important}.logo span{color:#6FD9C1!important}.logo small{color:#9FB1C6!important}
+.navlinks a{color:#DCE8F3}.navlinks a:hover,.about-links a:hover{color:#6FD9C1!important}
+.nav-contact{border-color:#466274!important;background:#16263A!important;color:#EFFFFB!important}
+.menu-toggle{color:#F2F7FC!important}.skip:focus{background:#6FD9C1;color:#0E1829}
+.hero{background:radial-gradient(ellipse at 87% 11%,rgba(111,217,193,.12),transparent 40%),linear-gradient(145deg,#101D30 0%,#0E1829 68%,#14233A 100%)!important;border-bottom:1px solid #24364B}
+.hero h1,.section-top h2,.about-grid h2,.contact-section h2{color:#F2F7FC!important}
+.hero h1 em,h2 em{color:#6FD9C1!important}.eyebrow{color:#80DBC7!important}.dot{background:#6FD9C1!important}
+.hero-desc,.section-top>p,.expertise-grid p,.steps p,.contact-section p{color:#B7C7D9!important}
+.subnote{color:#A0B4CB!important}.primary{color:#0B1F26!important;background:#6FD9C1!important;box-shadow:0 9px 30px #6FD9C12B!important}
+.primary:hover{background:#8BF0DA!important}.secondary{background:#1C2E44!important;color:#E8F6F2!important;border-color:#43576A!important}
+.hero-art{background:#17283D!important;border-color:#32485D!important;box-shadow:0 32px 74px #00000055!important;transform:rotate(1deg)}
+.window-bar{color:#B5C8D7!important;border-color:#34475B!important}.code-lines{background:#0B1423!important;color:#DCEFEF!important;border:1px solid #34485B}
+.code-lines .comment{color:#88A0AE!important}.code-lines b{color:#6FD9C1!important}.code-lines strong{color:#B9DAFF!important}
+.pipeline>div{background:#1C3347!important;border-color:#37536B!important;color:#EEF9F8!important}.pipeline small{color:#B5CBD6!important}.p-icon,.pipeline>b{color:#6FD9C1!important}
+.mini-table{border-color:#385064!important}.table-head,.table-row.heading,.table-foot{background:#20354A!important;color:#C9DAE8!important}.table-head span,.status{color:#76E2C7!important}.table-row{border-top-color:#344B60!important;color:#E4EEF8}
+.skillrail{border-bottom-color:#2F4154!important;color:#D7E5EF!important}.skillrail>span{color:#90ACBD!important}.skillrail i{color:#6FD9C1!important}
+.section{background:#0E1829!important}.section-top .eyebrow{color:#6FD9C1!important}
+.filterbar button{background:#1A2B40!important;border-color:#3A4F64!important;color:#C5D6E4!important;transition:background .18s,border-color .18s}
+.filterbar button.active,.filterbar button:hover{background:#6FD9C1!important;color:#0E1829!important;border-color:#6FD9C1!important}
+.projects-grid{align-items:stretch}.project-card{background:#14243A!important;border-color:#2F4559!important;box-shadow:0 9px 20px #050D1717;display:flex;flex-direction:column;height:100%;min-width:0}
+.project-card:hover{box-shadow:0 18px 40px #00000040!important;border-color:#559D97!important}.project-card[hidden]{display:none!important}
+.visual{background:radial-gradient(circle at 68% 15%,#284C4A 0%,transparent 55%),linear-gradient(135deg,#1B3743,#172C42)!important;color:#D9F7EE!important;height:197px}
+.project-card:nth-child(3n+2) .visual{background:radial-gradient(circle at 78% 15%,#365A61,transparent 54%),linear-gradient(135deg,#1B3A45,#1B2B45)!important}
+.project-card:nth-child(3n) .visual{background:radial-gradient(circle at 66% 15%,#364B68,transparent 52%),linear-gradient(135deg,#1D304C,#202B46)!important}
+.visual-top,.visual-bottom{color:#D1E8E5!important}.visual-bottom span{opacity:.8}.project-illustration{display:flex;align-items:center;justify-content:center;gap:18px;flex:1}
+.project-icon{display:grid;place-items:center;width:76px;height:76px;border-radius:20px;background:#6FD9C121;color:#9AF0DE;border:1px solid #7DE6D077;box-shadow:0 8px 32px #0315144B}
+.project-icon-line{width:36px;height:1px;background:#79B8B4}.project-keywords{color:#E9FCF8;font-weight:800;font-size:13px;line-height:1.35;max-width:155px}.project-keywords small{display:block;color:#A9D1CF;font-size:9px;letter-spacing:1.2px;margin-top:7px}
+.card-info{display:flex!important;flex:1;flex-direction:column;min-width:0}.card-meta{color:#89DCC9!important}.card-meta span{color:#7B97A6!important}
+.card-info h3,.card-info h3 a{color:#F2F7FC!important}.card-info h3{min-height:0!important;overflow-wrap:anywhere}.card-info p{min-height:0!important;color:#B7C9D9!important}
+.taglist{margin-top:auto!important}.taglist span{background:#253A4D!important;color:#CDE8E2!important;border:1px solid #35586A}
+.card-link{color:#7CE4CF!important;margin-top:12px!important}.project-footer{color:#9AB1C6!important}
+.muted{background:#121F31!important}.expertise-grid article{background:#1A2A3F!important;border-color:#30465C!important;color:#F2F7FC!important}
+.expertise-grid h3{color:#F2F7FC!important}.expertise-grid small{color:#9ED7D0!important;border-top-color:#354C61!important}.num{color:#8FB4BD!important}.glyph{color:#74DCC9!important}
+.steps>div{border-top-color:#477369!important}.steps span{color:#7FE3D1!important}.steps h3{color:#F0F7FC!important}
+.about-section{background:#18293C!important;border-top:1px solid #30495A;border-bottom:1px solid #30495A}.about-mark{background:linear-gradient(135deg,#1E3D48,#16263A)!important;border-color:#416D74!important}.about-mark>span span{color:#6FD9C1!important}.about-mark small{color:#9AD7CD!important}.about-grid p{color:#BDCFDF!important}
+.contact-section{background:#0E1829!important}.footer{background:#0C1625!important;border-top-color:#2E4155!important}.footer p,.footer span{color:#9DB3C7!important}
+@media(max-width:620px){.navlinks{background:#182B40!important;border:1px solid #39566B;box-shadow:0 20px 32px #0008!important}.project-illustration{gap:12px}.project-icon{width:64px;height:64px}.project-keywords{font-size:12px}}
